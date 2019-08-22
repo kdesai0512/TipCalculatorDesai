@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tip Calculator"
+    android:textAlignment="center"
+    android:textSize="35sp" />
+
+<EditText
+    android:id="@+id/billEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Bill"
+
+    android:inputType="numberDecimal"
+
+    />
+
+<EditText
+    android:id="@+id/percentEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Tip Percent"
+    android:inputType="numberDecimal"
+
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smiley"
+        android:text="GREAT"
+        android:textColor="#000000"
+        android:id="@+id/smiley"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/okayface"
+        android:text="OKAY"
+        android:textColor="#000000"
+        android:id="@+id/meh"
+        android:drawableBottom="@drawable/smile2"
+        />
+
+<Button
+    android:id="@+id/calculateButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Calculate Bill"
+    android:onClick="calculate"
+    />
+
+
+
+<TextView
+    android:id="@+id/totalTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp" />
+
+
+</LinearLayout>
