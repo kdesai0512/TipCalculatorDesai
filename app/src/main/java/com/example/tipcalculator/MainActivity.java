@@ -32,7 +32,55 @@ public class MainActivity extends AppCompatActivity {
         totalTextView.setText("Tip: " + df.format(tip) + "\n\nTotal Bill: " + df.format(total));
     }
 
+    public void great(View v) {
+        DecimalFormat df = new DecimalFormat("$#.00");
+        EditText billEditText = (EditText) findViewById (R.id.billEditText);
+        EditText percentEditText = (EditText) findViewById (R.id.percentEditText);
+        TextView totalTextView = (TextView)findViewById (R.id.totalTextView);
 
+        double bill = Double.parseDouble(billEditText.getText().toString());
+        double percent = 20;
+
+        double tip = ((percent / 100) * bill);
+        double total = bill + tip;
+
+        percentEditText.setText("" + percent);
+        totalTextView.setText("Tip: " + df.format(tip) + " Total Bill: " + df.format(total));
+    }
+
+    public void okay(View v) {
+        DecimalFormat df = new DecimalFormat("$#.00");
+        EditText billEditText = (EditText) findViewById (R.id.billEditText);
+        EditText percentEditText = (EditText) findViewById (R.id.percentEditText);
+        TextView totalTextView = (TextView)findViewById (R.id.totalTextView);
+
+        double bill = Double.parseDouble(billEditText.getText().toString());
+        double percent = 15;
+
+        double tip = ((percent / 100) * bill);
+        double total = bill + tip;
+
+        percentEditText.setText("" + percent);
+        totalTextView.setText("Tip: " + df.format(tip) + " Total Bill: " + df.format(total));
+
+    }
+
+    public void terrible(View v) {
+        DecimalFormat df = new DecimalFormat("$#.00");
+        EditText billEditText = (EditText) findViewById (R.id.billEditText);
+        EditText percentEditText = (EditText) findViewById (R.id.percentEditText);
+        TextView totalTextView = (TextView)findViewById (R.id.totalTextView);
+
+        double bill = Double.parseDouble(billEditText.getText().toString());
+        double percent = 10;
+
+        double tip = ((percent / 100) * bill);
+        double total = bill + tip;
+
+        percentEditText.setText("" + percent);
+        totalTextView.setText("Tip: " + df.format(tip) + " Total Bill: " + df.format(total));
+
+    }
 
 
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity"
-android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 <TextView
     android:id="@+id/titleTextView"
@@ -32,6 +32,19 @@ android:orientation="vertical">
     android:inputType="numberDecimal"
 
     />
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOW WAS THE SERVICE?"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
     <Button
         android:layout_width="wrap_content"
@@ -40,6 +53,7 @@ android:orientation="vertical">
         android:text="GREAT"
         android:textColor="#000000"
         android:id="@+id/smiley"
+        android:onClick="great"
         />
     <Button
         android:layout_width="wrap_content"
@@ -48,8 +62,21 @@ android:orientation="vertical">
         android:text="OKAY"
         android:textColor="#000000"
         android:id="@+id/meh"
-        android:drawableBottom="@drawable/smile2"
+        android:onClick="okay"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frowney"
+        android:text="TERRIBLE"
+        android:textColor="#000000"
+        android:id="@+id/mad"
+        android:onClick="terrible"
+        />
+
+
+    </LinearLayout>
 
 <Button
     android:id="@+id/calculateButton"
@@ -66,6 +93,5 @@ android:orientation="vertical">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textSize="20sp" />
-
 
 </LinearLayout>
