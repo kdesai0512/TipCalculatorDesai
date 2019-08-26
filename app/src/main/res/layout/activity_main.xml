@@ -4,25 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/layout"
+    android:background="@drawable/gradient_file">
 
-<TextView
-    android:id="@+id/titleTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Tip Calculator"
-    android:textAlignment="center"
-    android:textSize="35sp" />
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:text="Tip Calculator"
+        android:textAlignment="center"
+        android:textSize="35sp" />
 
-<EditText
-    android:id="@+id/billEditText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:hint="Bill"
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bill"
 
-    android:inputType="numberDecimal"
+        android:inputType="numberDecimal"
 
-    />
+        />
 
 <EditText
     android:id="@+id/percentEditText"
@@ -32,10 +35,12 @@
     android:inputType="numberDecimal"
 
     />
+
     <TextView
         android:id="@+id/service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#00BCD4"
         android:text="HOW WAS THE SERVICE?"
         android:textAlignment="center"
         android:textSize="25sp" />
@@ -44,20 +49,36 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+
+        android:layout_weight="-1"
+        >
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:background="@drawable/smiley"
         android:text="GREAT"
         android:textColor="#000000"
         android:id="@+id/smiley"
         android:onClick="great"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+
         />
+
+        <Button
+            android:layout_width="72dp"
+            android:layout_height="62dp"
+            android:background="@drawable/good"
+            android:text="GOOD"
+            android:textColor="#000000"
+            android:id="@+id/good"
+            android:onClick="good"
+            />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
         android:background="@drawable/okayface"
         android:text="OKAY"
         android:textColor="#000000"
@@ -65,10 +86,21 @@
         android:onClick="okay"
         />
 
+        <Button
+            android:layout_width="72dp"
+            android:layout_height="62dp"
+
+            android:background="@drawable/frowney"
+            android:text="BAD"
+            android:textColor="#000000"
+            android:id="@+id/annoyed"
+            android:onClick="bad"
+            />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/frowney"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:background="@drawable/terrible"
         android:text="TERRIBLE"
         android:textColor="#000000"
         android:id="@+id/mad"
@@ -84,6 +116,7 @@
     android:layout_height="wrap_content"
     android:text="Calculate Bill"
     android:onClick="calculate"
+
     />
 
 
@@ -93,5 +126,4 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textSize="20sp" />
-
 </LinearLayout>
