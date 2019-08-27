@@ -26,9 +26,12 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
 
+        Toast.makeText(getApplicationContext(), "Please type in bill!", Toast.LENGTH_LONG).show();
+
     }
 
     public void calculate(View v) {
+
         DecimalFormat df = new DecimalFormat("$#.00");
         EditText billEditText = (EditText) findViewById (R.id.billEditText);
         EditText percentEditText = (EditText) findViewById (R.id.percentEditText);
@@ -41,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         double total = bill + tip;
 
 
-        Toast.makeText(this, "Please enter the bill.", Toast.LENGTH_SHORT).show();
-        totalTextView.setText("Tip: " + df.format(tip) + "\nTotal Bill: " + df.format(total));
+
+        totalTextView.setText("Tip: " + df.format(tip) + "\n\nTotal Bill: " + df.format(total));
     }
 
     public void great(View v) {
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         double tip = ((percent / 100) * bill);
         double total = bill + tip;
 
-        percentEditText.setText("" + df.format(percent));
+        percentEditText.setText("" + percent);
         totalTextView.setText("Tip: " + df.format(tip) + "\nTotal Bill: " + df.format(total));
 
     }
